@@ -1,41 +1,14 @@
 const container = document.querySelector(".container");
 const coffees = [
-  {
-    name: "Perspiciatis",
-    image: "images/coffee1.jpg"
-  },
-  {
-    name: "Voluptatem",
-    image: "images/coffee2.jpg"
-  },
-  {
-    name: "Explicabo",
-    image: "images/coffee3.jpg"
-  },
-  {
-    name: "Rchitecto",
-    image: "images/coffee4.jpg"
-  },
-  {
-    name: " Beatae",
-    image: "images/coffee5.jpg"
-  },
-  {
-    name: " Vitae",
-    image: "images/coffee6.jpg"
-  },
-  {
-    name: "Inventore",
-    image: "images/coffee7.jpg"
-  },
-  {
-    name: "Veritatis",
-    image: "images/coffee8.jpg"
-  },
-  {
-    name: "Accusantium",
-    image: "images/coffee9.jpg"
-  }
+  { name: "Cappuccino", image: "/images/coffee1.jpg" },
+  { name: "Flat white", image: "/images/coffee2.jpg" },
+  { name: "latte", image: "/images/coffee3.jpg" },
+  { name: "Caffe Machiato", image: "/images/coffee4.jpg" },
+  { name: " Espresso", image: "/images/coffee5.jpg" },
+  { name: " Caffe macho", image: "/images/coffee6.jpg" },
+  { name: "Americano", image: "/images/coffee7.jpg" },
+  { name: "Turkish coffee", image: "/images/coffee8.jpg" },
+  { name: "Cafe Au lait", image: "/images/coffee9.jpg" },
 ];
 const showCoffees = () => {
   let output = "";
@@ -50,7 +23,16 @@ const showCoffees = () => {
               `)
   );
   container.innerHTML = output;
+
+  
+  const tasteButtons = document.querySelectorAll(".card--link");
+  tasteButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      alert("Thanks for your order!");
+    });
+  });
 };
+    
 
 document.addEventListener("DOMContentLoaded", showCoffees);
 
